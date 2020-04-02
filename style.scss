@@ -1,3 +1,14 @@
+$Soft-Blue: hsl(231, 69%, 60%);
+$Soft-Red: hsl(0, 94%, 66%);
+$Grayish-Blue: hsl(229, 8%, 60%);
+$Very-Dark-Blue: hsl(229, 31%, 21%);
+$Font-size: 18px;
+$font-family: 'Rubik', sans-serif;
+
+
+
+
+
 body{
     margin: 5px 20px;
     padding: 0px;
@@ -5,21 +16,83 @@ body{
 .navbar{
     display: flex;
    justify-content: space-between;
+   font-family: $font-family;
 
     .navbar__menu__list{
         display: flex;
         float: right;
         list-style: none;
         padding-right: 50px;
+
         li{
-            padding-left: 60px;
+            margin-left: 60px;
+            padding: 10px;
             cursor: pointer;
+            font-size: 14px;
             &:hover{
-                color: hotpink;
+                color: $Soft-Red;
             }
 
         }
-        
+        .navbar__menu__list__ligin{
+            border:  2px black;
+            background-color: $Soft-Red;
+            border-radius: 10%;
+        }
     }
-   
+}
+.heading{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 80px;
+
+    .heading--text{
+        font-size: 18px;
+        font-family: 'Rubik', sans-serif;
+    }
+    .heading--text button{
+        font-size: 17px;
+        padding: 8px;
+        border-radius: 5%;
+        cursor: pointer;
+    }
+    .heading--text--button1{
+        background-color: $Soft-Blue ;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
+        border: none;
+
+    }
+    .heading--text__button2{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
+
+    }
+
+    .heading--img{
+        position: absolute;
+        right: 0px;
+        .heading--back{
+            position: absolute;
+            right: 0px;
+            top: 100px;
+            width: 300px;
+            height: 200px;
+            background-color: hsl(231, 69%, 60%);
+            z-index: -1;
+            border-radius: 0 0 0 30%;
+        }
+
+
+    }
+
+
+}
+.features{
+    text-align: center;
+    margin-top: 100px;
+    font-size: $Font-size;
+    font-family: $font-family;
+    color: $Very-Dark-Blue ;
+    .features--paragh{
+        opacity: 0.6;
+    }
 }
